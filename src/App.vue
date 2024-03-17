@@ -6,7 +6,9 @@ import { RouterView, RouterLink } from 'vue-router';
 	<nav
 		class="bg-primary-purple p-4 flex justify-start relative text-custom-white w-full"
 	>
-		<RouterLink class="text-xl font-Madimi-One" to="/"
+		<RouterLink
+			class="text-xl font-Madimi-One hover:text-custom-black transition-all"
+			to="/"
 			>Dogs That Awe</RouterLink
 		>
 		<div
@@ -27,7 +29,7 @@ import { RouterView, RouterLink } from 'vue-router';
 			>
 		</div>
 	</nav>
-	<div class="p-4 w-full h-auto">
+	<div class="p-4 w-full h-auto flex flex-col center">
 		<RouterView />
 	</div>
 </template>

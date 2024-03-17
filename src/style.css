@@ -11,7 +11,7 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	--primary-purple: #7d5ba6;
+	--primary-purple: rgb(125, 91, 166);
 	--white: #f4f3ee;
 	--black: #000000;
 	--secondary-green: #53ff45;
@@ -28,4 +28,9 @@
 	justify-content: flex-start;
 	width: 100vw;
 	height: 100vh;
+}
+
+.center {
+	align-items: center;
+	justify-content: center;
 }
