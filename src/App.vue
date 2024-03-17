@@ -1,30 +1,35 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
+import { RouterView, RouterLink } from 'vue-router';
 </script>
 
 <template>
-	<div class="flex justify-center items-center">
-		<a href="https://vitejs.dev" target="_blank">
-			<img src="/vite.svg" class="logo" alt="Vite logo" />
-		</a>
-		<a href="https://vuejs.org/" target="_blank">
-			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-		</a>
+	<nav
+		class="bg-primary-purple p-4 flex justify-start relative text-custom-white w-full"
+	>
+		<RouterLink class="text-xl font-Madimi-One" to="/"
+			>Dogs That Awe</RouterLink
+		>
+		<div
+			class="font-[Inter] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium flex flex-row justify-center items-center gap-2"
+		>
+			<RouterLink
+				class="text-lg hover:text-secondary-green"
+				:class="{ 'text-secondary-green': $route.path === '/good' }"
+				to="/good"
+				>Good Boys</RouterLink
+			>
+			<div class="bg-custom-white w-[2px] h-6" />
+			<RouterLink
+				class="text-lg hover:text-secondary-pink"
+				:class="{ 'text-secondary-pink': $route.path === '/bad' }"
+				to="/bad"
+				>Bad Boys</RouterLink
+			>
+		</div>
+	</nav>
+	<div class="p-4 w-full h-auto">
+		<RouterView />
 	</div>
-	<HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-	filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
